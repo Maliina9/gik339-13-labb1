@@ -11,8 +11,14 @@ h1 {
 }
 fieldset {
   width: 90%;
+  height: auto;
   margin: auto;
 }
 .textfield {
   width: 200px;
+}
+#output {
+  width: 200px;
+  height: 20px;
+  border: 1px solid red;
 }

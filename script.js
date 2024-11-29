@@ -11,9 +11,10 @@ function uppdate(e){
     output.innerHTML = e.target.value;
 }}
 
-// Lägg till eventlyssnare till textfälten (color och content)
-color.addEventListener('input', uppdate);
-content.addEventListener('input', uppdate);
+querySelectorAll('.textfield'); 
+const input = querySelectorAll('.textfield');
+input.forEach((field) => field.addEventListener('input', uppdate));
+
 
 // Eventlyssnare för checkboxen
 checkbox.addEventListener('change', function() {

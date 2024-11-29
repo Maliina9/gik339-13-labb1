@@ -23,7 +23,7 @@ checkbox.addEventListener('change', function() {
 });
 
 // Eventlyssnare för knappen
-knapp.addEventListener('click', function() {
+knapp[0].addEventListener('click', function() {
     // Ta bort div-elementet vid klick
     output.style.display = 'none';
 });

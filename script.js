@@ -1,7 +1,7 @@
 const checkbox = document.querySelector('#divStyle');
 const textFields = document.querySelectorAll('.textfield');
 const knapp = document.getElementsByClassName('knapp');
-const output = document.getElementById('output');
+let output = document.getElementById('output');
 
 function uppdate(e){
     console.log('Function: e', e.target);
@@ -11,10 +11,11 @@ function uppdate(e){
     output.innerHTML = e.target.value;
 }}
 
-querySelectorAll('.textfield'); 
-const input = querySelectorAll('.textfield');
-input.forEach((field) => field.addEventListener('input', uppdate));
+const input = document.querySelectorAll('.textfield');
+input.forEach(input => input.addEventListener('input', uppdate));
 
+//input.forEach(input => input.addEventListener('input', uppdate));
+input.forEach(input => input.addEventListener('input', uppdate));
 
 // Eventlyssnare för checkboxen
 checkbox.addEventListener('change', function() {
@@ -24,13 +25,22 @@ checkbox.addEventListener('change', function() {
 });
 
 // Eventlyssnare för ta bort knappen
-knapp[0].addEventListener('click', function() {
-    // Ta bort div-elementet vid klick
-    output.style.display = 'none';
+knapp[0].addEventListener('click', function () {
+    console.log('hej');
+    if (output) {
+        output.remove(); // Ta bort output-div helt
+        output = null; // Nollställ variabeln
+    }
 });
 
-// Eventlyssnare för lägg till knappen
-knapp[1].addEventListener('click', function() {
-//  Lägg till div-elementet till body
-    output.style.display = 'block';
+// Eventlyssnare för "Lägg till"-knappen
+knapp[1].addEventListener('click', function () {
+    if (!output) {
+        // Skapa och lägg till output-div om den inte finns
+        html = `<div id="output"></div>`;
+        place = document.querySelector('fieldset');
+        document.querySelector('fieldset').insertAdjacentHTML('beforeend', html);
+        output = document.getElementById('output'); // Uppdatera variabeln
+
+    }
 });

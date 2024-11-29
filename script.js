@@ -22,13 +22,14 @@ checkbox.addEventListener('change', function() {
     console.log('Checkbox status:', Checkbox.checked);
 });
 
-// Eventlyssnare för knappen
+// Eventlyssnare för ta bort knappen
 knapp[0].addEventListener('click', function() {
     // Ta bort div-elementet vid klick
     output.style.display = 'none';
 });
 
-//knapp[1].addEventListener('click', function() {
-    // Lägg till div-elementet till body
-  //  document.body.appendChild(output);
-// });
+// Eventlyssnare för lägg till knappen
+knapp[1].addEventListener('click', function() {
+//  Lägg till div-elementet till body
+    output.style.display = 'block';
+});

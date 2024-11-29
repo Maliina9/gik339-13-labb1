@@ -27,3 +27,8 @@ knapp[0].addEventListener('click', function() {
     // Ta bort div-elementet vid klick
     output.style.display = 'none';
 });
+
+//knapp[1].addEventListener('click', function() {
+    // Lägg till div-elementet till body
+  //  document.body.appendChild(output);
+// });

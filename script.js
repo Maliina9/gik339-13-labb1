@@ -17,7 +17,7 @@ function uppdate(e){
 // Eventlyssnare för textfields
 const input = document.querySelectorAll('.textfield');
 input.forEach(input => input.addEventListener('input', uppdate));
-input.forEach(input => input.addEventListener('input', uppdate));
+
 
 // Eventlyssnare för checkboxen
 checkbox.addEventListener('change', function() {

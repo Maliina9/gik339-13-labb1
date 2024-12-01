@@ -28,7 +28,6 @@ checkbox.addEventListener('change', function() {
 
 // Eventlyssnare för ta bort knappen
 knapp[0].addEventListener('click', function () {
-    console.log('hej');
     if (output) {
         output.remove(); // Ta bort output-div helt
         output = null; // Nollställ variabeln
@@ -43,6 +42,5 @@ knapp[1].addEventListener('click', function () {
         place = document.querySelector('fieldset');
         document.querySelector('fieldset').insertAdjacentHTML('beforeend', html);
         output = document.getElementById('output'); // Uppdatera variabeln
-
     }
 });

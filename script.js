@@ -1,8 +1,10 @@
+// Uppgift 4
 const checkbox = document.querySelector('#divStyle');
 const textFields = document.querySelectorAll('.textfield');
 const knapp = document.getElementsByClassName('knapp');
 let output = document.getElementById('output');
 
+// Uppgift 5
 function uppdate(e){
     console.log('Function: e', e.target);
     const inputName = e.target.name;
@@ -11,10 +13,10 @@ function uppdate(e){
     output.innerHTML = e.target.value;
 }}
 
+// Uppgift 6
+// Eventlyssnare för textfields
 const input = document.querySelectorAll('.textfield');
 input.forEach(input => input.addEventListener('input', uppdate));
-
-//input.forEach(input => input.addEventListener('input', uppdate));
 input.forEach(input => input.addEventListener('input', uppdate));
 
 // Eventlyssnare för checkboxen

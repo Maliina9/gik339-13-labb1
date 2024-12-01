@@ -23,7 +23,6 @@ input.forEach(input => input.addEventListener('input', uppdate));
 checkbox.addEventListener('change', function() {
     // Ändra bakgrundsfärg på div-elementet till den färg som anges i color-input
     output.style.backgroundColor = color.value;
-    console.log('Checkbox status:', Checkbox.checked);
 });
 
 // Eventlyssnare för ta bort knappen
